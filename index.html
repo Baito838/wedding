@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/308efbf9d4.js" crossorigin="anonymous"></script>
+
+    <!-- Transiton JS -->
+    <script defer src="assets/script/transition.js"></script>
+
+    <!-- Self -->
+    <title>Soka & Amizar</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/index.css">
+</head>
+
+<body>
+    <div class="home">
+        <div>
+            <h1 class="hidden title text-center">Soka & Amizar</h1>
+        </div>
+        <div>
+            <h5 class="hidden subtitle text-center">April 26, 2023. 08.00 AM</h5>
+        </div>
+        <div id="countdown">
+            <div class="hidden">
+                <div class="hidden clock" id="days">00</div>
+                <p class="time text-center">Day</p>
+            </div>
+            <div class="hidden">
+                <div class="hidden clock" id="hours">00</div>
+                <p class="time text-center">Hour</p>
+            </div>
+            <div class="hidden">
+                <div class="hidden clock" id="minutes">00</div>
+                <p class="time text-center">Minutes</p>
+            </div>
+            <div class="hidden">
+                <div class="hidden clock" id="seconds">00</div>
+                <p class="time text-center">Seconds</p>
+            </div>
+        </div>
+        <a href="home.html">
+            <div class="hidden d-flex justify-content-center mt-2">
+                <button type="button" class="btn btn-outline-secondary"><i class="fa-regular fa-envelope"></i> Open
+                    Invitation</button>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("April 27, 2023 08:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            var distance = countDownDate - now;
+
+            // Calculate the days, hours, minutes and seconds left
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the HTML elements
+            document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+            document.getElementById("hours").innerHTML = hours
+                .toString()
+                .padStart(2, "0");
+            document.getElementById("minutes").innerHTML = minutes
+                .toString()
+                .padStart(2, "0");
+            document.getElementById("seconds").innerHTML = seconds
+                .toString()
+                .padStart(2, "0");
+
+            // If the countdown is over, show a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+@font-face {
+    font-family: allana;
+    src: url('/assets/font/Allana.otf');
+}
+
+@font-face {
+    font-family: amster;
+    src: url('/assets/font/Amster.ttf');
+}
+
+@font-face {
+    font-family: wedding;
+    src: url('/assets/font/Wedding.ttf');
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(0.25);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');

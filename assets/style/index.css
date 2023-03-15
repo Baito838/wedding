@@ -1,0 +1,57 @@
+#countdown {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#countdown div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.title {
+    font-family: amster;
+}
+
+.subtitle {
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    background-image: url('/img/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.time {
+    font-size: 1rem;
+    margin-top: -5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+@media(max-width: 600px) {
+    .home {
+        padding-top: 80px;
+    }
+}
